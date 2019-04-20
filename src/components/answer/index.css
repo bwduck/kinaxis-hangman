@@ -1,0 +1,5 @@
+.c-answer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

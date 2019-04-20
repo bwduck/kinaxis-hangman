@@ -1,0 +1,22 @@
+.c-answer-letter {
+  border-bottom: 2px solid black;
+  width: 30px;
+  font-size: 30px;
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+  min-height: 40px;
+  vertical-align: top;
+}
+
+@media (min-width: 768px) {
+  .c-answer-letter {
+    width: 50px;
+    font-size: 50px;
+    min-height: 60px;
+  }
+}
+
+.c-answer-letter:last-child {
+  margin-right: 0px;
+}

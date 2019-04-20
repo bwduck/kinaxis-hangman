@@ -1,0 +1,9 @@
+.c-answer-word {
+  margin: 0 20px 20px;
+}
+
+@media (min-width: 768px) {
+  .c-answer-word {
+    margin-right: 40px;
+  }
+}

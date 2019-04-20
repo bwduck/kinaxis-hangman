@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GameOver/> renders and matches the snapshot 1`] = `
+<div
+  className="c-game-over"
+>
+  <span
+    className="c-game-over-title"
+  >
+    GAME OVER!!
+  </span>
+  <span
+    className="c-game-over-message"
+  >
+    test message
+  </span>
+  <div
+    className="c-game-over-buttons"
+  >
+    <button
+      className="btn"
+      onClick={[Function]}
+      type="button"
+    >
+      Try again
+    </button>
+  </div>
+</div>
+`;

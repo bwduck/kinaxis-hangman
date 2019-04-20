@@ -1,0 +1,31 @@
+.c-letter-tile {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: uppercase;
+  font-size: 20px;
+  height: 32px;
+  width: 32px;
+  margin: 3px 5px;
+}
+
+@media (min-width: 768px) {
+  .c-letter-tile {
+    height: 40px;
+    width: 40px;
+    margin: 5px 8px;
+    font-size: 28px;
+  }
+}
+
+.c-letter-tile:active {
+  position: relative;
+  top: 1px;
+}
+
+.c-letter-tile:disabled,
+.c-letter-tile:disabled:hover,
+.c-letter-tile:disabled:focus {
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border: 1px solid #d83526;
+}

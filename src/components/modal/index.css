@@ -1,0 +1,33 @@
+.c-dimmer {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #000;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
+
+.c-modal {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 200px;
+  width: 90%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .c-modal {
+    width: 400px;
+  }
+}
+
+.c-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

@@ -1,0 +1,11 @@
+.c-letter-rack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .c-letter-rack {
+    max-width: 500px;
+  }
+}

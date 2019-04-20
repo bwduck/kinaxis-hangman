@@ -1,0 +1,9 @@
+svg {
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+circle {
+  fill: none;
+}

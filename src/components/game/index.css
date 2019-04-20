@@ -1,0 +1,73 @@
+#hangman-icon {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  #hangman-icon {
+    height: 200px;
+  }
+}
+
+.c-game {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15px;
+  min-height: 90%;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.c-game > * {
+  flex-grow: 1;
+}
+
+.c-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .c-title {
+    font-size: 40px;
+  }
+}
+
+.btn {
+  box-shadow: 0px -1px 0px 0px #f0f7fa;
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  background-color: #33bdef;
+  border-radius: 6px;
+  border: 1px solid #057fd0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-weight: bold;
+  text-shadow: 0px -2px 0px #5b6178;
+}
+
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color: #019ad2;
+  outline: none;
+}
+
+.c-game-over-buttons .btn {
+  height: 32px;
+  font-size: 20px;
+  margin: 0 15px;
+}
+
+.c-game-over > * {
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+}
+
+.c-game-over {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
