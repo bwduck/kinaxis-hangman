@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const GameOver = ({ gameOverMessage, lostGame, restart, startNewPuzzle }) => (
-  <div className="c-game-over">
-    <span className="c-game-over-title">GAME OVER!!</span>
-    <span className="c-game-over-message">{gameOverMessage}</span>
-    <div className="c-game-over-buttons">
-      {lostGame && (
-        <button className="btn" onClick={restart} type="button">
-          Try again
-        </button>
-      )}
-      {!lostGame && (
-        <button className="btn" onClick={startNewPuzzle} type="button">
-          New Puzzle
-        </button>
-      )}
+const GameOver = ({ gameOverMessage, lostGame, restart, startNewPuzzle }) => {
+  const title = lostGame ? 'GAME OVER!!' : 'YOU WIN!!';
+  return (
+    <div className="c-game-over">
+      <span className="c-game-over-title">{title}</span>
+      <span className="c-game-over-message">{gameOverMessage}</span>
+      <div className="c-game-over-buttons">
+        {lostGame && (
+          <button className="btn" onClick={restart} type="button">
+            Try again
+          </button>
+        )}
+        {!lostGame && (
+          <button className="btn" onClick={startNewPuzzle} type="button">
+            New Puzzle
+          </button>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 GameOver.propTypes = {
   gameOverMessage: PropTypes.string.isRequired,

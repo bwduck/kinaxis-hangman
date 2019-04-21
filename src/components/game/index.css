@@ -51,7 +51,6 @@
 .btn:focus {
   background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
   background-color: #019ad2;
-  outline: none;
 }
 
 .c-game-over-buttons .btn {
