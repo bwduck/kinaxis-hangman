@@ -60,16 +60,6 @@ const Game = () => {
 
   const lostGame = points === MAX_POINTS;
 
-  const handleEnterKey = () => {
-    if (!gameOverMessage.length) return;
-    if (lostGame) {
-      restart();
-    } else {
-      startNewPuzzle();
-    }
-  };
-  useKeyPress(handleEnterKey, ['Enter']);
-
   return (
     <div className="c-game">
       <h1 className="c-title">Duck Hangman!</h1>
