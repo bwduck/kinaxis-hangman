@@ -30,7 +30,7 @@ const Game = () => {
     } else if (points === MAX_POINTS) {
       setGameOverMessage(MSG_LOSE);
     }
-  }, [pickedLetters, points]);
+  }, [pickedLetters, points, puzzle]);
 
   const pickLetter = letter => {
     if (!puzzle.answer.toUpperCase().includes(letter)) {
