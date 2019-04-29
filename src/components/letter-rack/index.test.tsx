@@ -6,7 +6,7 @@ import LetterRack from './index';
 describe('<LetterRack/>', () => {
   it('renders and matches the snapshot', () => {
     const wrapper = shallow(
-      <LetterRack pickLetter={() => null} pickedLetters={['A', 'B']} />
+      <LetterRack pickLetter={(): null => null} pickedLetters={['A', 'B']} />
     );
     expect(toJSON(wrapper)).toMatchSnapshot();
   });

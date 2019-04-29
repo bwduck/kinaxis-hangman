@@ -2,17 +2,29 @@ import React from 'react';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { act } from 'react-dom/test-utils';
+import { jsxText } from '@babel/types';
 import { useKeyPress, usePuzzle } from './index';
+import * as mockConstants from '../constants/__mocks__';
 import * as utils from '../utils';
-import * as constants from '../constants';
+// import * as constants from '../constants';
+// import * as constants from '../constants';
+import { getRandomInt } from '../utils';
 
 configure({ adapter: new Adapter() });
 
+type EventOrCallback = (e: Event | { key: string }) => void;
+
+type Dict = { [key: string]: EventOrCallback };
+
+jest.mock('../constants');
+
 describe('useKeyPress hook', () => {
-  const map = {};
-  window.document.addEventListener = jest.fn((event, cb) => {
-    map[event] = cb;
-  });
+  const map: Dict = {};
+  window.document.addEventListener = jest.fn(
+    (event: string, cb: EventOrCallback) => {
+      map[event] = cb;
+    }
+  );
 
   it('calls callback if allowed key is pushed', () => {
     const callbackFn = jest.fn();
@@ -40,33 +52,28 @@ describe('useKeyPress hook', () => {
 });
 
 describe('usePuzzle hook', () => {
-  const p1 = { question: 'q1', answer: 'a1', congrats: 'c1' };
-  const p2 = { question: 'q2', answer: 'a2', congrats: 'c2' };
-  const p3 = { question: 'q3', answer: 'a3', congrats: 'c3' };
-  const puzzles = [{ ...p1 }, { ...p2 }, { ...p3 }];
   it('returns expected puzzles', () => {
-    constants.PUZZLES = puzzles;
+    const utils = require('../utils');
     utils.getRandomInt = jest
       .fn()
       .mockReturnValue(0)
       .mockReturnValueOnce(1)
       .mockReturnValueOnce(0)
       .mockReturnValueOnce(2);
-
     let currentPuzzle;
-    let getNewPuzzle;
+    let getNewPuzzle: () => void;
 
     const Test = () => {
       [currentPuzzle, getNewPuzzle] = usePuzzle();
       return null;
     };
     mount(<Test />);
-    expect(currentPuzzle).toEqual(p1);
+    expect(currentPuzzle).toEqual(mockConstants.p1);
     act(() => getNewPuzzle());
-    expect(currentPuzzle).toEqual(p3);
+    expect(currentPuzzle).toEqual(mockConstants.p3);
     act(() => getNewPuzzle());
-    expect(currentPuzzle).toEqual(p2);
+    expect(currentPuzzle).toEqual(mockConstants.p2);
     act(() => getNewPuzzle());
-    expect(currentPuzzle).toEqual(p3);
+    expect(currentPuzzle).toEqual(mockConstants.p3);
   });
 });

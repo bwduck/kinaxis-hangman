@@ -3,8 +3,8 @@ import { drop, remove } from 'ramda';
 import { arrayWithIndex, getRandomInt } from '../utils';
 import { PUZZLES } from '../constants';
 
-const useKeyPress = (callback, keysAllowed) => {
-  const handleEvent = e => {
+const useKeyPress = (callback: Function, keysAllowed: string[]) => {
+  const handleEvent = (e: KeyboardEvent) => {
     if (keysAllowed.includes(e.key)) {
       callback(e.key);
     }

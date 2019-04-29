@@ -1,7 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-const GameOver = ({ gameOverMessage, lostGame, restart, startNewPuzzle }) => {
+const GameOver = ({
+  gameOverMessage,
+  lostGame,
+  restart,
+  startNewPuzzle,
+}: {
+  gameOverMessage: string;
+  lostGame: boolean;
+  restart: React.MouseEventHandler;
+  startNewPuzzle: React.MouseEventHandler;
+}) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     buttonRef.current && buttonRef.current.focus();

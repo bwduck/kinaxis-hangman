@@ -4,7 +4,13 @@ import LetterTile from './tile';
 import { ALPHABET } from '../../constants';
 import './index.css';
 
-const LetterRack = ({ pickLetter, pickedLetters }) => (
+const LetterRack = ({
+  pickLetter,
+  pickedLetters,
+}: {
+  pickLetter: Function;
+  pickedLetters: string[];
+}) => (
   <div className="c-letter-rack">
     {ALPHABET.map(letter => (
       <LetterTile

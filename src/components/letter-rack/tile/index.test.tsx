@@ -5,7 +5,7 @@ import LetterTile from './index';
 
 describe('<LetterTile/>', () => {
   it('renders and matches the snapshot', () => {
-    const handleClick = () => null;
+    const handleClick = (): null => null;
     const wrapper = shallow(
       <LetterTile
         disabled={false}

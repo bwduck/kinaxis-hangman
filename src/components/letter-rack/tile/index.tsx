@@ -2,7 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-const LetterTile = ({ disabled, letter, handleLetterTileClick }) => {
+const LetterTile = ({
+  disabled,
+  letter,
+  handleLetterTileClick,
+}: {
+  disabled: boolean;
+  letter: string;
+  handleLetterTileClick: Function;
+}) => {
   const handleClick = () => {
     handleLetterTileClick(letter);
   };

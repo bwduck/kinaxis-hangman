@@ -5,7 +5,7 @@ import Modal from './index';
 const globalAny: any = global;
 
 describe('Modal component', () => {
-  const Child = () => <div>Yolo</div>;
+  const child = <div>child</div>;
   let component;
 
   // add a div with #modal-root id to the global body
@@ -15,12 +15,8 @@ describe('Modal component', () => {
   body && body.appendChild(modalRoot);
 
   it('should render all the styled components and the children', () => {
-    const wrapper = mount(
-      <Modal>
-        <Child />
-      </Modal>
-    );
+    const wrapper = mount(<Modal>{child}</Modal>);
     expect(wrapper.find('div.c-dimmer').exists()).toBeTruthy();
-    expect(wrapper.find(Modal).contains(Child)).toBeTruthy();
+    expect(wrapper.find(Modal).contains(child)).toBeTruthy();
   });
 });

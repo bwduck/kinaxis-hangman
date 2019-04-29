@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-const Question = ({ phrase }) => (
+const Question = ({ phrase }: { phrase: string }) => (
   <div className="c-question">
     <span>{phrase}</span>
   </div>

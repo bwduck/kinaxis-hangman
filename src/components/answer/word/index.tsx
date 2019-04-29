@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import AnswerLetter from './letter';
 import './index.css';
 
-const AnswerWord = ({ pickedLetters, word }) => {
+const AnswerWord = ({
+  pickedLetters,
+  word,
+}: {
+  pickedLetters: string[];
+  word: string;
+}) => {
   const letters = word.split('');
 
   return (

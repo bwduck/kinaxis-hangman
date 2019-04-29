@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { append, equals, length, pipe, reduce, trim } from 'ramda';
+import { append, equals, pipe, reduce, trim } from 'ramda';
 import LetterRack from '../letter-rack';
 import HangmanIcon from '../hangman';
 import Question from '../question';
@@ -11,11 +11,11 @@ import { MAX_POINTS, MSG_LOSE, KEYS } from '../../constants';
 import { removeLetterFromString } from '../../utils';
 import './index.css';
 
-const answerCorrect = phrase =>
+const answerCorrect = (phrase: string) =>
   pipe(
     reduce(removeLetterFromString, phrase),
     trim,
-    length,
+    str => str.length,
     equals(0)
   );
 
@@ -32,7 +32,7 @@ const Game = () => {
     }
   }, [pickedLetters, points, puzzle]);
 
-  const pickLetter = letter => {
+  const pickLetter = (letter: string) => {
     if (!puzzle.answer.toUpperCase().includes(letter)) {
       setPoints(points + 1);
     }

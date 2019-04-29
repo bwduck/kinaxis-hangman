@@ -7,8 +7,8 @@ describe('<GameOver/>', () => {
   const msg = 'test message';
 
   it('renders and matches the snapshot', () => {
-    const restart = () => null;
-    const newGame = () => null;
+    const restart = (): null => null;
+    const newGame = (): null => null;
     const wrapper = shallow(
       <GameOver
         gameOverMessage={msg}

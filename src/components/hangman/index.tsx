@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-const HangmanIcon = ({ points }) => (
+const HangmanIcon = ({ points }: { points: number }) => (
   <svg
     id="hangman-icon"
     viewBox="0 0 257 252"
