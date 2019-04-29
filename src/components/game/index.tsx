@@ -21,9 +21,9 @@ const answerCorrect = phrase =>
 
 const Game = () => {
   const [puzzle, getNewPuzzle] = usePuzzle();
-  const [gameOverMessage, setGameOverMessage] = useState('');
-  const [points, setPoints] = useState(0);
-  const [pickedLetters, setPickedLetters] = useState([]);
+  const [gameOverMessage, setGameOverMessage] = useState<string>('');
+  const [points, setPoints] = useState<number>(0);
+  const [pickedLetters, setPickedLetters] = useState<string[]>([]);
   useEffect(() => {
     if (answerCorrect(puzzle.answer.toUpperCase())(pickedLetters)) {
       setGameOverMessage(puzzle.congrats);
@@ -39,7 +39,7 @@ const Game = () => {
     setPickedLetters(append(letter, pickedLetters));
   };
 
-  const handleKeyboardInput = letter => {
+  const handleKeyboardInput = (letter: string) => {
     if (gameOverMessage.length) return;
     if (!pickedLetters.includes(letter.toUpperCase())) {
       pickLetter(letter.toUpperCase());
@@ -50,7 +50,7 @@ const Game = () => {
   const restart = () => {
     setPoints(0);
     setPickedLetters([]);
-    setGameOverMessage(false);
+    setGameOverMessage('');
   };
 
   const startNewPuzzle = () => {

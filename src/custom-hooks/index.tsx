@@ -17,7 +17,15 @@ const useKeyPress = (callback, keysAllowed) => {
   });
 };
 
-const usePuzzle = () => {
+interface Puzzle {
+  question: string;
+  answer: string;
+  congrats: string;
+}
+
+type usePuzzleReturn = [Puzzle, () => void];
+
+const usePuzzle = (): usePuzzleReturn => {
   const puzzle = useRef(PUZZLES[0]);
   const [puzzlesLeft, setPuzzlesLeft] = useState(
     drop(1, [...arrayWithIndex(PUZZLES.length)])

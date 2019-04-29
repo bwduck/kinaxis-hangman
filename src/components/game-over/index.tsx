@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 const GameOver = ({ gameOverMessage, lostGame, restart, startNewPuzzle }) => {
-  const buttonRef = useRef(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
-    buttonRef.current.focus();
+    buttonRef.current && buttonRef.current.focus();
   }, []);
   const title = lostGame ? 'GAME OVER!!' : 'YOU WIN!!';
   const btnText = lostGame ? 'Try Again' : 'New Puzzle';
