@@ -1,26 +1,5 @@
-# duck-hangman
-Hangman game developed with ReactJS.
+# kinaxis-hangman
+A Hangman Game that might have a few bugs. Can you find them?
 
 ## Demo
-Try it out at https://bwduck.github.io/duck-hangman/.
-
-## Building
-After cloning:
-```
-yarn
-yarn start
-```
-
-## Testing
-Run suite of unit tests:
-```
-yarn test
-```
-
-## Features
-Coded in ReactJS, and includes:
-* Testing with Jest and Enzyme
-  * Tests snapshots, custom hooks, utils, and page interactions
-* Functional programming using Ramda
-* Uses custom React Hooks
-* React Portals
+Try it out at https://bwduck.github.io/kinaxis-hangman/.

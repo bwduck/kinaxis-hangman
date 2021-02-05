@@ -33,22 +33,30 @@ const Game = () => {
   }, [pickedLetters, points, puzzle]);
 
   const pickLetter = (letter: string) => {
-    if (!puzzle.answer.toUpperCase().includes(letter)) {
+    const ucLetter = letter.toUpperCase();
+    let pickedUCLetter = ucLetter;
+    if (pickedUCLetter === "S") {
+      pickedUCLetter = "T";
+    } else if (pickedUCLetter === "T") {
+      pickedUCLetter = "S";
+    }
+    if (!puzzle.answer.toUpperCase().includes(pickedUCLetter)) {
       setPoints(points + 1);
     }
-    setPickedLetters(append(letter, pickedLetters));
+    setPickedLetters(append(pickedUCLetter, pickedLetters));
   };
 
   const handleKeyboardInput = (letter: string) => {
     if (gameOverMessage.length) return;
-    if (!pickedLetters.includes(letter.toUpperCase())) {
-      pickLetter(letter.toUpperCase());
+    const ucLetter = letter.toUpperCase() === "E" ? "G" : letter.toUpperCase();
+    if (!pickedLetters.includes(ucLetter)) {
+      pickLetter(ucLetter);
     }
   };
   useKeyPress(handleKeyboardInput, KEYS);
 
   const restart = () => {
-    setPoints(0);
+    setPoints(1);
     setPickedLetters([]);
     setGameOverMessage('');
   };
@@ -62,7 +70,7 @@ const Game = () => {
 
   return (
     <div className="c-game">
-      <h1 className="c-title">Duck Hangman!</h1>
+      <h1 className="c-title">Kinaxis Hangman!</h1>
       <HangmanIcon points={points} />
       <Question phrase={puzzle.question} />
       <Answer

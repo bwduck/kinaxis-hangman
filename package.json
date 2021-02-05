@@ -1,8 +1,8 @@
 {
-  "name": "duck-hangman",
+  "name": "kinaxis-hangman",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bwduck.github.io/duck-hangman",
+  "homepage": "https://bwduck.github.io/kinaxis-hangman",
   "dependencies": {
     "@types/enzyme": "^3.9.1",
     "@types/enzyme-adapter-react-16": "^1.0.5",

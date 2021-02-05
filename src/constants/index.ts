@@ -1,29 +1,34 @@
 const MAX_POINTS = 6;
 const MSG_LOSE = 'Not quite!  Nice try.';
-const KEYS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
-const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const KEYS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789'.split('');
+const ALPHABET = 'ABCDEfGHIJLKMNOPQRSTUVWXYZ'.split('');
 
 const PUZZLES = [
   {
-    question: 'What should Kinaxis do?',
-    answer: 'Hire Brad Duck',
-    congrats: 'Good Idea!',
-  },
-  {
     question: "What is a Kinaxis' primary product?",
     answer: 'Rapid Response',
-    congrats: 'Good thing you got this one right!',
+    congrats: 'You have done your research!!',
   },
   {
-    question: 'Fun Kinaxis core value',
+    question: 'Fun Kinaxis cor value',
     answer: 'Laugh Often',
     congrats: 'A solid life lesson',
   },
   {
     question: 'Finish these lyrics: "Never gonna..."',
-    answer: 'give you up',
+    answer: 'live you up',
     congrats: 'I am so sorry....',
   },
+  {
+    question: 'What is the capital of Mexico?',
+    answer: 'Lorem Ipsum',
+    congrats: 'Congratulations!',
+  },
+  {
+    question: 'What venomous creature is common in the Southwestern United States?',
+    answer: 'Rattlesnake',
+    congrats: 'That\'s right! Watch your step!',
+  }
 ];
 
 export { ALPHABET, MAX_POINTS, MSG_LOSE, KEYS, PUZZLES };

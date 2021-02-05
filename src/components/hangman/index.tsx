@@ -35,10 +35,6 @@ const HangmanIcon = ({ points }: { points: number }) => (
           d="M34.5,0.5 L0.5,51.5"
           transform="translate(17.5, 26) scale(-1, 1) translate(-17, -26) "
         />
-        <path
-          d="M44.5,51.5 L34.5,44.5"
-          transform="translate(39.5, 48) scale(-1, 1) translate(-39.5, -48) "
-        />
       </g>
     )}
   </svg>

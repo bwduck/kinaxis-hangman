@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
 const GameOver = ({
@@ -13,9 +13,10 @@ const GameOver = ({
   startNewPuzzle: React.MouseEventHandler;
 }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
-  useEffect(() => {
-    buttonRef.current && buttonRef.current.focus();
-  }, []);
+  // Commented out below to create bug, button will not be accessible
+  // useEffect(() => {
+  //   buttonRef.current && buttonRef.current.focus();
+  // }, []);
   const title = lostGame ? 'GAME OVER!!' : 'YOU WIN!!';
   const btnText = lostGame ? 'Try Again' : 'New Puzzle';
 

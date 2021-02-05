@@ -11,17 +11,17 @@ const LetterRack = ({
   pickLetter: Function;
   pickedLetters: string[];
 }) => (
-  <div className="c-letter-rack">
-    {ALPHABET.map(letter => (
-      <LetterTile
-        handleLetterTileClick={pickLetter}
-        letter={letter}
-        disabled={pickedLetters.includes(letter)}
-        key={letter}
-      />
-    ))}
-  </div>
-);
+    <div className="c-letter-rack">
+      {ALPHABET.map(letter => (
+        <LetterTile
+          handleLetterTileClick={pickLetter}
+          letter={letter}
+          disabled={pickedLetters.includes(letter.toUpperCase())}
+          key={letter}
+        />
+      ))}
+    </div>
+  );
 
 LetterRack.propTypes = {
   pickLetter: PropTypes.func,

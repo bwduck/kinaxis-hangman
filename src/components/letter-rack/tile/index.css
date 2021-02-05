@@ -22,6 +22,9 @@
   top: 1px;
 }
 
+.c-letter-tile[data-picked="true"],
+.c-letter-tile[data-picked="true"]:hover,
+.c-letter-tile[data-picked="true"]:focus,
 .c-letter-tile:disabled,
 .c-letter-tile:disabled:hover,
 .c-letter-tile:disabled:focus {

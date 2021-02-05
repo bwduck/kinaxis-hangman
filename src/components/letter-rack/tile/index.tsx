@@ -18,7 +18,7 @@ const LetterTile = ({
   return (
     <button
       className="btn c-letter-tile"
-      disabled={disabled}
+      data-picked={disabled}
       type="button"
       onClick={handleClick}
     >
