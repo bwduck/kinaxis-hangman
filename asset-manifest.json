@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kinaxis-hangman/static/css/main.2d61d5da.chunk.css",
-    "main.js": "/kinaxis-hangman/static/js/main.9d68a33c.chunk.js",
-    "main.js.map": "/kinaxis-hangman/static/js/main.9d68a33c.chunk.js.map",
+    "main.js": "/kinaxis-hangman/static/js/main.b2bf0c18.chunk.js",
+    "main.js.map": "/kinaxis-hangman/static/js/main.b2bf0c18.chunk.js.map",
     "runtime~main.js": "/kinaxis-hangman/static/js/runtime~main.75d88a47.js",
     "runtime~main.js.map": "/kinaxis-hangman/static/js/runtime~main.75d88a47.js.map",
     "static/js/2.d238f3b5.chunk.js": "/kinaxis-hangman/static/js/2.d238f3b5.chunk.js",
     "static/js/2.d238f3b5.chunk.js.map": "/kinaxis-hangman/static/js/2.d238f3b5.chunk.js.map",
     "index.html": "/kinaxis-hangman/index.html",
-    "precache-manifest.07d69f0bfc5054bc59272bc3905e44e6.js": "/kinaxis-hangman/precache-manifest.07d69f0bfc5054bc59272bc3905e44e6.js",
+    "precache-manifest.b3871b6ecc39d77088ef17492611d572.js": "/kinaxis-hangman/precache-manifest.b3871b6ecc39d77088ef17492611d572.js",
     "service-worker.js": "/kinaxis-hangman/service-worker.js",
     "static/css/main.2d61d5da.chunk.css.map": "/kinaxis-hangman/static/css/main.2d61d5da.chunk.css.map"
   }

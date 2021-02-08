@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da306940cc9496a8e26aab67d23f6cc9",
+    "revision": "85b2ac5a373551f7cc53d5d75e2a4046",
     "url": "/kinaxis-hangman/index.html"
   },
   {
-    "revision": "c202cccea6d1e4ad2886",
+    "revision": "9cdeefcf129ebad883e5",
     "url": "/kinaxis-hangman/static/css/main.2d61d5da.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kinaxis-hangman/static/js/2.d238f3b5.chunk.js"
   },
   {
-    "revision": "c202cccea6d1e4ad2886",
-    "url": "/kinaxis-hangman/static/js/main.9d68a33c.chunk.js"
+    "revision": "9cdeefcf129ebad883e5",
+    "url": "/kinaxis-hangman/static/js/main.b2bf0c18.chunk.js"
   },
   {
     "revision": "395c603ff18ef67c385b",
