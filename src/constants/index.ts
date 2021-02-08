@@ -16,7 +16,7 @@ const PUZZLES = [
   },
   {
     question: 'Finish these lyrics: "Never gonna..."',
-    answer: 'live you up',
+    answer: 'give you ug',
     congrats: 'I am so sorry....',
   },
   {
